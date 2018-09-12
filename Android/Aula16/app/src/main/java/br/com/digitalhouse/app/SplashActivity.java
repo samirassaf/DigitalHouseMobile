@@ -10,6 +10,7 @@ public class SplashActivity extends AppCompatActivity {
 
    private ImageView imagem;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

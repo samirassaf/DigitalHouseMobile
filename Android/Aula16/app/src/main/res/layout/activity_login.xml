@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".LoginActivity">
@@ -59,17 +66,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
-        android:text="REGISTER NOW"
+        android:text="Register Now"
+
         />
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp">
 
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="3"
+            android:background="@color/divider"
+            android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:gravity="center"
-        android:text="------------OR----------------"
+        android:text="OR"
 
         />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="3"
+            android:background="@color/divider"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
 
 
     <Button
@@ -78,8 +109,8 @@
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@color/facebook"
-        android:drawableLeft="@color/facebook"
+         android:backgroundTint="@color/facebook"
+        android:drawableLeft="@drawable/ic_facebook"
         android:text="Login with facebook"/>
 
     <Button
@@ -87,6 +118,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
+        android:drawableLeft="@drawable/ic_twitter"
         android:backgroundTint="@color/twiter"
         android:text="Login With Twitter"
 
@@ -97,12 +129,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
+        android:drawableLeft="@drawable/ic_google"
         android:backgroundTint="@color/google"
         android:text="Login With Google"
 
         />
 
 
-
-
 </LinearLayout>
+
+
+</ScrollView>
